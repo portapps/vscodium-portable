@@ -4,20 +4,31 @@ package main
 
 import (
 	"os"
+	"path"
 
 	. "github.com/portapps/portapps"
 	"github.com/portapps/portapps/pkg/utl"
 )
 
+type config struct {
+	Cleanup bool `yaml:"cleanup" mapstructure:"cleanup"`
+}
+
 var (
 	app *App
+	cfg *config
 )
 
 func init() {
 	var err error
 
+	// Default config
+	cfg = &config{
+		Cleanup: false,
+	}
+
 	// Init app
-	if app, err = New("vscodium-portable", "VSCodium"); err != nil {
+	if app, err = NewWithCfg("vscodium-portable", "VSCodium", cfg); err != nil {
 		Log.Fatal().Err(err).Msg("Cannot initialize application. See log file for more info.")
 	}
 }
@@ -27,6 +38,15 @@ func main() {
 	app.Process = utl.PathJoin(app.AppPath, "VSCodium.exe")
 	app.Args = []string{
 		"--log debug",
+	}
+
+	// Cleanup on exit
+	if cfg.Cleanup {
+		defer func() {
+			utl.Cleanup([]string{
+				path.Join(os.Getenv("APPDATA"), "VSCodium"),
+			})
+		}()
 	}
 
 	utl.OverrideEnv("VSCODE_APPDATA", utl.PathJoin(app.DataPath, "appdata"))
