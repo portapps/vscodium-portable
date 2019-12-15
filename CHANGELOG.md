@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.41.0-33 (2019/12/15)
+
+* VSCodium 1.41.0
+* Add cleanup config
+* Portapps 1.31.0
+
 ## 1.40.2-32 (2019/11/28)
 
 * VSCodium 1.40.2
