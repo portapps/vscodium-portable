@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.52.0-50 (2020/12/13)
+
+* VSCodium 1.52.0
+* Disable vscode logs if global log disable enabled
+* Portapps 3.1.0
+
 ## 1.51.1-49 (2020/11/13)
 
 * VSCodium 1.51.1
