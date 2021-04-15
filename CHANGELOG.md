@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.55.2-52 (2021/04/15)
+
+* VSCodium 1.55.2
+* Portapps 3.3.0
+* No more win32 release
+
 ## 1.53.2-51 (2021/02/15)
 
 * VSCodium 1.53.2
