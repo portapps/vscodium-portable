@@ -1,4 +1,4 @@
-i<p align="center"><a href="https://portapps.io/app/vscodium-portable/" target="_blank"><img width="100" src="https://github.com/portapps/vscodium-portable/blob/master/res/papp.png"></a></p>
+<p align="center"><a href="https://portapps.io/app/vscodium-portable/" target="_blank"><img width="100" src="https://github.com/portapps/vscodium-portable/blob/master/res/papp.png"></a></p>
 
 <p align="center">
   <a href="https://portapps.io/app/vscodium-portable/#download"><img src="https://img.shields.io/github/release/portapps/vscodium-portable.svg?style=flat-square" alt="GitHub release"></a>
